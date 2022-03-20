@@ -27,7 +27,7 @@ export default function Sidebar() {
     >
       <Box paddingY="20px">
         <Box width="120px" marginBottom="20px" paddingY="20px">
-          <NextImage src="/barely_functional.png" height={60} width={120} />
+          <NextImage src="/logo.svg" height={60} width={120} />
         </Box>
       </Box>
     </Box>
