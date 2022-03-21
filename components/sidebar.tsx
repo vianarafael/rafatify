@@ -36,6 +36,19 @@ const navMenu = [
   },
 ];
 
+const musicMenu = [
+  {
+    name: "Create Playlist",
+    icon: MdPlaylistAdd,
+    route: "/",
+  },
+  {
+    name: "Favorites",
+    icon: MdFavorite,
+    route: "/favorites",
+  },
+];
+
 export default function Sidebar() {
   return (
     <Box
@@ -62,6 +75,26 @@ export default function Sidebar() {
                         marginRight="20px"
                       />
                       {menu.name}
+                    </LinkOverlay>
+                  </NextLink>
+                </LinkBox>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+        <Box>
+          <List spacing={2}>
+            {musicMenu.map((item) => (
+              <ListItem padding="20px" fontSize="16px" key={item.name}>
+                <LinkBox>
+                  <NextLink href={item.route} passHref>
+                    <LinkOverlay>
+                      <ListIcon
+                        as={item.icon}
+                        color="white"
+                        marginRight="20px"
+                      />
+                      {item.name}
                     </LinkOverlay>
                   </NextLink>
                 </LinkBox>
