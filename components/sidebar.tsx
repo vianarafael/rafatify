@@ -82,10 +82,11 @@ export default function Sidebar() {
             ))}
           </List>
         </Box>
-        <Box>
+        <Divider color="gray.800" />
+        <Box marginTop="20px">
           <List spacing={2}>
             {musicMenu.map((item) => (
-              <ListItem padding="20px" fontSize="16px" key={item.name}>
+              <ListItem paddingX="20px" fontSize="16px" key={item.name}>
                 <LinkBox>
                   <NextLink href={item.route} passHref>
                     <LinkOverlay>
