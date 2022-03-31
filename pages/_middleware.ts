@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { server } from "../config";
 
 const signedInPages = ["/", "/playlist", "/library"];
 
@@ -7,7 +8,7 @@ export default function middleware(req) {
     const token = req.cookies.TRAX_ACCESS_TOKEN;
 
     if (!token) {
-      return NextResponse.redirect("/signin");
+      return NextResponse.redirect(`${server}/signin`);
     }
   }
 }
